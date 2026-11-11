@@ -1,5 +1,6 @@
-# Zadanie 6.2: inicjały imienia i nazwiska.
-# George May to dane przykładowe; możesz zastąpić je własnymi.
-name = "George"  # Zapisuje przykładowe imię.
-surname = "May"  # Zapisuje przykładowe nazwisko.
-print(name[0] + surname[0])  # Pobiera pierwszą literę każdego tekstu; indeksy zaczynają się od 0, więc wynik to GM.
+# Zadanie 6.2: tworzymy inicjały, czyli pierwszą literę imienia i pierwszą literę nazwiska.
+
+name = "George"  # Zapisuje przykładowe imię George pod nazwą name.
+surname = "May"  # Zapisuje przykładowe nazwisko May pod nazwą surname.
+
+print(name[0] + surname[0])  # print() pokazuje połączone pierwsze litery, czyli GM.

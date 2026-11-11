@@ -1,6 +1,6 @@
-# Zadanie 7.2: hasło musi zawierać co najmniej 8 znaków.
-# Przykłady: university i peter123 -> True; seven i anna333 -> False.
+# Zadanie 7.2: sprawdzamy, czy hasło ma przynajmniej 8 znaków.
+# f przed tekstem pozwala wstawić w miejsca {} wartości zmiennych lub wyniki działań.
 
-password = input('Enter password: ')  # Wczytuje hasło jako tekst wpisany z klawiatury.
-password_ok = len(password) >= 8  # Liczy znaki funkcją len() i sprawdza, czy jest ich przynajmniej 8.
-print(f'Password length is valid: {password_ok}')  # Wyświetla wynik sprawdzenia długości hasła.
+password = input('Enter password: ')  # Pokazuje pytanie, czeka na wpisanie hasła i zapisuje otrzymany tekst jako password.
+password_ok = len(password) >= 8  # >= znaczy „większe lub równe”; zapisuje True dla 8 lub więcej znaków, inaczej False.
+print(f'Password length is valid: {password_ok}')  # Wyświetla opis oraz wynik sprawdzenia długości hasła.

@@ -1,10 +1,11 @@
-# Zadanie 3.3: zamiana wartości x i y za pomocą zmiennej pomocniczej z.
+# Zadanie 3.3: zamieniamy miejscami wartości dwóch zmiennych: x ma dostać 34, a y ma dostać 7.
+# z przechowuje stare x, żeby nie zgubić jego wartości podczas zamiany.
 
-x = 7  # Nadaje zmiennej x początkową wartość 7.
-y = 34  # Nadaje zmiennej y początkową wartość 34.
-z = 0  # Przygotowuje pomocniczą zmienną, która na chwilę przechowa wartość x.
-print("Przed zamianą: x =", x, "y =", y)  # Wyświetla wartości przed ich zamianą.
-z = x  # Zapamiętuje dotychczasową wartość x, czyli 7, aby jej nie stracić.
-x = y  # Kopiuje wartość 34 ze zmiennej y do zmiennej x.
-y = z  # Kopiuje zapamiętaną wartość 7 ze zmiennej z do zmiennej y.
-print("Po zamianie: x =", x, "y =", y)  # Wyświetla wynik: x ma wartość 34, a y ma wartość 7.
+x = 7  # Zapisuje początkowe x = 7.
+y = 34  # Zapisuje początkowe y = 34.
+z = 0  # Przygotowuje pomocniczą zmienną z.
+print("Przed zamianą: x =", x, "y =", y)  # Pokazuje początkowe wartości x = 7 i y = 34.
+z = x  # Zapamiętuje stare x, czyli 7, w z.
+x = y  # Wpisuje 34 do x; teraz x i y mają 34, a z nadal 7.
+y = z  # Wpisuje zachowane 7 do y; zamiana jest gotowa.
+print("Po zamianie: x =", x, "y =", y)  # Pokazuje końcowe wartości: x = 34 oraz y = 7.

@@ -1,10 +1,12 @@
-# Zadanie 5.5: cena produktu po obniżce i wartość obniżki.
-# Liczby dziesiętne wpisuj z kropką, np. 24.72.
-price = float(input("Enter price: "))  # Pobiera cenę przed obniżką jako liczbę.
-discount = float(input("Enter discount %: "))  # Pobiera rabat w procentach, np. 15 oznacza 15%.
-reduction = price * discount / 100  # Zamienia procent na część ceny i liczy kwotę obniżki.
-discounted_price = price - reduction  # Odejmuje obniżkę od ceny początkowej.
-print(f"Price before discount: {price:.2f}")  # Wyświetla cenę początkową z dwoma miejscami po przecinku.
-print(f"Discount: {discount:g}%")  # Wyświetla procent rabatu; g usuwa zbędne końcowe zera.
-print(f"Price with discount: {discounted_price:.2f}")  # Wyświetla nową cenę; dla 24.72 i 15% będzie to 21.01.
-print(f"Reduction: {reduction:.2f}")  # Wyświetla różnicę cen; dla danych z przykładu będzie to 3.71.
+# Zadanie 5.5: liczymy kwotę obniżki oraz cenę po rabacie.
+# f wstawia wartości z {}; :.2f pokazuje 2 miejsca po kropce, a :g pomija np. końcówkę .0.
+
+price = float(input("Enter price: "))  # Pobiera cenę przed rabatem, np. 24.72, i zapisuje ją w price.
+discount = float(input("Enter discount %: "))  # Pobiera procent rabatu; wpisz np. 15, bez znaku %.
+reduction = price * discount / 100  # Liczy kwotę obniżki; dla przykładu 24.72 * 15 / 100 = 3.708.
+discounted_price = price - reduction  # Odejmuje obniżkę od ceny; w przykładzie 24.72 - 3.708 = 21.012.
+
+print(f"Price before discount: {price:.2f}")  # Pokazuje cenę początkową z dwiema cyframi po kropce.
+print(f"Discount: {discount:g}%")  # Pokazuje procent rabatu i dopisuje znak %, np. 15%.
+print(f"Price with discount: {discounted_price:.2f}")  # Pokazuje cenę po obniżce; w przykładzie 21.01.
+print(f"Reduction: {reduction:.2f}")  # Pokazuje kwotę obniżki; w przykładzie 3.71.

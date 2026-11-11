@@ -1,7 +1,6 @@
-# Zadanie 7.1: sprawdzenie warunku wieku podanego w ćwiczeniu.
-# To uproszczony warunek z zadania, a nie sprawdzenie rzeczywistych przepisów podatkowych.
-# Przykłady: 38 -> False, 27 -> False, 26 -> True, 22 -> True, 18 -> True.
+# Zadanie 7.1: sprawdzamy, czy podany wiek spełnia warunek z ćwiczenia.
+# f przed tekstem pozwala wstawić w miejsca {} wartości zmiennych lub wyniki działań.
 
-age = int(input('Enter age: '))  # Wczytuje wiek i zamienia wpisany tekst na liczbę całkowitą.
-no_tax = age <= 26  # Sprawdza, czy wiek jest mniejszy lub równy 26, zgodnie z treścią zadania.
-print(f'Exemption from paying taxes: {no_tax}')  # Wyświetla True, gdy warunek jest spełniony, lub False w przeciwnym razie.
+age = int(input('Enter age: '))  # Pyta o wiek, zamienia odpowiedź na liczbę i zapamiętuje ją pod nazwą age.
+no_tax = age <= 26  # <= znaczy „mniejsze lub równe”; dla 26 zapisuje True, dla 27 zapisuje False.
+print(f'Exemption from paying taxes: {no_tax}')  # Wstawia obliczone True lub False do zdania i wyświetla całe zdanie.

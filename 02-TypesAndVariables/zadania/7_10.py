@@ -1,7 +1,9 @@
-# Zadanie 7.10: odgadnięcie wyniku rzutu kostką wykonanego przez komputer.
+# Zadanie 7.10: komputer rzuca kostką, a użytkownik próbuje odgadnąć wynik.
+# = zapisuje wynik w zmiennej, a == porównuje dwie wartości.
+# f przed tekstem pozwala wstawić w miejsca {} wartości zmiennych lub wyniki działań.
 
-import random  # Udostępnia funkcję do losowania wyniku rzutu kostką.
-computer = random.randint(1, 6)  # Losuje wynik komputera, nie pokazując go przed odgadnięciem.
-you = int(input('Guess the dice number (1-6): '))  # Wczytuje Twój typ i zamienia tekst na liczbę całkowitą.
-you_won = you == computer  # Porównuje obie liczby; dwa znaki == oznaczają sprawdzenie równości.
-print(f'You won: {you_won}')  # Wyświetla True, jeśli odgadnięto wynik, albo False, jeśli typ był inny.
+import random  # Udostępnia moduł random, aby można było użyć funkcji losującej randint.
+computer = random.randint(1, 6)  # Losuje liczbę od 1 do 6 włącznie i zapamiętuje ją jako computer, bez wyświetlania jej przed próbą.
+you = int(input('Guess the dice number (1-6): '))  # Pobiera Twój typ, zamienia go na liczbę całkowitą i zapisuje pod nazwą you.
+you_won = you == computer  # Sprawdza, czy wpisana liczba jest taka sama jak wylosowana; zapisuje True przy trafieniu, inaczej False.
+print(f'You won: {you_won}')  # Wyświetla informację o wyniku: True oznacza trafienie, a False nietrafienie.

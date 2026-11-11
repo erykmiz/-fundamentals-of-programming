@@ -1,18 +1,18 @@
-# Zadanie 3.1: analiza siedmiu zmiennych, ich wartości i typów.
+# Zadanie 3.1: opisujemy siedem zmiennych z przykładowymi danymi firmy.
 
-company = "ABC Data"  # Zmienna company przechowuje nazwę firmy; wartość: "ABC Data", typ: str.
-phone = "555-123-009"  # Zmienna phone przechowuje numer telefonu jako tekst typu str.
-employees = 25  # Zmienna employees przechowuje liczbę pracowników: 25, typ int.
-remote_work = True  # Zmienna remote_work przechowuje wartość True typu bool.
-big_company = employees > 100  # Sprawdza, czy pracowników jest ponad 100; wartość: False, typ: bool.
-income = 4500000  # Zmienna income przechowuje dochód: 4500000, typ int.
-income_per_person = income / employees  # Dzieli dochód przez liczbę pracowników; wartość: 180000.0, typ: float.
+company = "ABC Data"  # Pod nazwą company zapisuje tekst ABC Data; cudzysłowy wskazują typ str.
+phone = "555-123-009"  # Zapisuje numer jako tekst typu str; myślniki są częścią numeru, nie odejmowaniem.
+employees = 25  # Pod nazwą employees zapisuje liczbę pracowników: 25; jej typ to int.
+remote_work = True  # Zapisuje informację „tak, praca zdalna”; True znaczy prawda i ma typ bool.
+big_company = employees > 100  # Najpierw pyta, czy 25 > 100; odpowiedź False zapisuje jako bool w big_company.
+income = 4500000  # Zapisuje dochód 4 500 000 jako liczbę całkowitą typu int.
+income_per_person = income / employees  # Dzieli 4500000 przez 25 osób; wynik 180000.0 ma typ float, bo użyto /.
 
-print("Liczba zmiennych w analizowanym programie: 7")  # Podaje łączną liczbę zmiennych z treści zadania.
-print("company:", company, "| typ:", type(company))  # Wyświetla nazwę, wartość i typ zmiennej company.
-print("phone:", phone, "| typ:", type(phone))  # Wyświetla nazwę, wartość i typ zmiennej phone.
-print("employees:", employees, "| typ:", type(employees))  # Wyświetla nazwę, wartość i typ zmiennej employees.
-print("remote_work:", remote_work, "| typ:", type(remote_work))  # Wyświetla nazwę, wartość i typ zmiennej remote_work.
-print("big_company:", big_company, "| typ:", type(big_company))  # Wyświetla nazwę, wartość i typ zmiennej big_company.
-print("income:", income, "| typ:", type(income))  # Wyświetla nazwę, wartość i typ zmiennej income.
-print("income_per_person:", income_per_person, "| typ:", type(income_per_person))  # Wyświetla dochód na osobę i jego typ.
+print("Liczba zmiennych w analizowanym programie: 7")  # Pokazuje odpowiedź: w oryginalnym programie jest 7 zmiennych.
+print("company:", company, "| typ:", type(company))  # Pokazuje podpis company, wartość ABC Data i jej typ str.
+print("phone:", phone, "| typ:", type(phone))  # Pokazuje numer 555-123-009 oraz informację, że to tekst typu str.
+print("employees:", employees, "| typ:", type(employees))  # Pokazuje liczbę pracowników 25 i typ int.
+print("remote_work:", remote_work, "| typ:", type(remote_work))  # Pokazuje True, czyli prawdę, oraz typ bool.
+print("big_company:", big_company, "| typ:", type(big_company))  # Pokazuje False, bo 25 nie jest większe od 100, oraz typ bool.
+print("income:", income, "| typ:", type(income))  # Pokazuje dochód 4500000 i typ int.
+print("income_per_person:", income_per_person, "| typ:", type(income_per_person))  # Pokazuje 180000.0 i typ float.

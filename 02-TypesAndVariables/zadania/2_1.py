@@ -1,10 +1,10 @@
-# Zadanie 2.1: działanie ośmiu operatorów Pythona.
+# Zadanie 2.1: poznajemy osiem znaków służących do liczenia i porównywania.
 
-print(5 + 3)  # + dodaje dwie liczby; wynik: 8.
-print(5 * 3)  # * mnoży dwie liczby; wynik: 15.
-print(2 ** 3)  # ** oznacza potęgowanie: 2 do potęgi 3 daje 8.
-print(7 / 2)  # / dzieli liczby i zwraca wynik typu float: 3.5.
-print(7 // 2)  # // dzieli i zaokrągla wynik w dół do liczby całkowitej; tutaj: 3.
-print(7 % 2)  # % zwraca resztę z dzielenia; po podzieleniu 7 przez 2 zostaje 1.
-print(7 > 5)  # > sprawdza, czy lewa liczba jest większa od prawej; wynik: True, czyli prawda.
-print(5 <= 5)  # <= sprawdza, czy lewa liczba jest mniejsza lub równa prawej; wynik: True.
+print(5 + 3)  # + dodaje: do 5 dokładamy 3 i otrzymujemy 8.
+print(5 * 3)  # * mnoży: 5 * 3 to 5 + 5 + 5, czyli 15.
+print(2 ** 3)  # ** potęguje: 2 ** 3 to trzy dwójki pomnożone przez siebie, czyli 2 * 2 * 2 = 8.
+print(7 / 2)  # / to zwykłe dzielenie: 7 podzielone przez 2 daje 3.5; typ takiego wyniku nazywa się float.
+print(7 // 2)  # // dzieli i zaokrągla w dół: 7 / 2 = 3.5, więc pokazuje 3.
+print(7 % 2)  # % daje resztę z dzielenia: 7 = 3 * 2 + 1, więc reszta wynosi 1.
+print(7 > 5)  # > pyta „czy 7 jest większe od 5?”; pokazuje True, bo tak jest.
+print(5 <= 5)  # <= pyta „czy 5 jest mniejsze lub równe 5?”; pokazuje True, bo liczby są równe.
