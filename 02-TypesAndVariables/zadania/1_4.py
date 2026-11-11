@@ -1,17 +1,10 @@
+# Zadanie 1.4: symulacja pięciu rzutów kostką.
+# Uruchom plik w VS Code, aby zobaczyć pięć losowych wyników.
 
-# Importujemy moduł random, który pozwala losować liczby
-import random
+import random  # Udostępnia funkcje służące do losowania liczb.
 
-# Wyświetlamy napis informujący, co robi program
-print("Dice rolling simulator")
-
-# Pętla for wykona poniższy kod dokładnie 5 razy
-for i in range(5):
-
-    # Losujemy liczbę całkowitą od 1 do 6 (jak na kostce)
-    # Wynik zapisujemy w zmiennej dice_roll
-    dice_roll = random.randint(1, 6)
-
-    # Wyświetlamy wylosowaną liczbę
-    # end=" " sprawia, że wyniki są w jednej linii, oddzielone spacjami
-    print(dice_roll, end=" ")
+print("Dice rolling simulator")  # Wyświetla tytuł programu: symulator rzutów kostką.
+for i in range(5):  # Powtarza wcięte polecenia pięć razy; i przyjmuje wartości od 0 do 4.
+    dice_roll = random.randint(1, 6)  # Losuje liczbę całkowitą od 1 do 6 włącznie, jak na kostce.
+    print(dice_roll, end=" ")  # Wyświetla wynik i spację zamiast przejścia do następnej linii.
+print()  # Kończy linię po wyświetleniu wszystkich pięciu wyników.
