@@ -1,22 +1,24 @@
-# Zadanie 6.29: wypisanie N pierwszych liczb pierwszych.
-# N oznacza liczbę szukanych wyników; pierwszość sprawdzamy osobno dla każdego kandydata.
-n = int(input('How many prime numbers should be printed? '))  # Wczytuje liczbę szukanych liczb pierwszych.
-if n < 1:  # Sprawdza, czy zamówiono przynajmniej jeden wynik.
-    print('Enter a positive number of primes.')  # Informuje, że N powinno być dodatnie.
-else:  # Rozpoczyna szukanie dla dodatniego N.
-    found = 0  # Liczy już znalezione liczby pierwsze.
-    candidate = 2  # Zaczyna od najmniejszej liczby pierwszej.
-    print('Prime numbers:', end=' ')  # Wyświetla nagłówek bez kończenia linii.
-    while found < n:  # Szuka kolejnych kandydatów, dopóki nie znajdzie N wyników.
+# Zadanie 6.29: Szukamy N pierwszych liczb pierwszych.
+# Liczba pierwsza ma tylko dwa dodatnie dzielniki: 1 i samą siebie.
+# Wystarczy sprawdzać do pierwiastka; dalej powtarzałyby się pary, np. 2 * 6 i 6 * 2.
+
+n = int(input('How many prime numbers should be printed? '))  # Pobiera liczbę szukanych wyników N.
+if n < 1:  # Sprawdza, czy N jest mniejsze od 1.
+    print('Enter a positive number of primes.')  # Prosi o dodatnią liczbę wyników.
+else:  # Rozpoczyna szukanie dla poprawnego N.
+    found = 0  # Zaczyna liczenie znalezionych liczb od zera.
+    candidate = 2  # Zaczyna sprawdzanie kandydatów od liczby 2.
+    print('Prime numbers:', end=' ')  # Pokazuje nagłówek bez przejścia do nowej linii.
+    while found < n:  # Szuka, dopóki znalezionych liczb jest mniej niż N.
         is_prime = True  # Zakłada, że kandydat jest pierwszy, dopóki nie znajdzie dzielnika.
-        divisor = 2  # Zaczyna sprawdzanie od najmniejszego możliwego dzielnika większego od 1.
-        while divisor * divisor <= candidate:  # Sprawdza dzielniki do pierwiastka; większy dzielnik miałby już sprawdzony mniejszy odpowiednik.
-            if candidate % divisor == 0:  # Sprawdza, czy dzielenie przez dany dzielnik nie pozostawia reszty.
-                is_prime = False  # Oznacza kandydata jako liczbę złożoną po znalezieniu dzielnika.
-                break  # Kończy sprawdzanie tego kandydata, bo znaleziony dzielnik już wystarcza.
-            divisor += 1  # Przechodzi do następnego potencjalnego dzielnika.
-        if is_prime:  # Sprawdza, czy nie znaleziono żadnego dzielnika.
-            print(candidate, end=' ')  # Wyświetla znalezioną liczbę pierwszą.
-            found += 1  # Zwiększa liczbę gotowych wyników o jeden.
-        candidate += 1  # Przechodzi do kolejnej liczby, niezależnie od wyniku sprawdzania.
-    print()  # Kończy linię po wypisaniu wszystkich znalezionych liczb.
+        divisor = 2  # Zaczyna sprawdzanie dzielników od 2.
+        while divisor * divisor <= candidate:  # Sprawdza dzielniki najwyżej do pierwiastka z kandydata.
+            if candidate % divisor == 0:  # Sprawdza, czy dzielnik dzieli kandydata bez reszty.
+                is_prime = False  # Zapamiętuje, że kandydat nie jest liczbą pierwszą.
+                break  # Kończy tylko wewnętrzną pętlę sprawdzania dzielników.
+            divisor += 1  # Przechodzi do następnego dzielnika.
+        if is_prime:  # Sprawdza, czy kandydat pozostał uznany za pierwszy.
+            print(candidate, end=' ')  # Pokazuje znalezioną liczbę pierwszą i spację.
+            found += 1  # Zwiększa liczbę znalezionych wyników o 1.
+        candidate += 1  # Przechodzi do następnego kandydata.
+    print()  # Kończy wiersz po wszystkich wynikach.

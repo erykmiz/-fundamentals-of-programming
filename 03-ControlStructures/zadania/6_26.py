@@ -1,13 +1,15 @@
-# Zadanie 6.26: maksymalnie trzy próby wpisania PIN-u 0805.
-correct_pin = '0805'  # Zapisuje PIN jako tekst, dzięki czemu początkowe zero nie znika.
-pin_ok = False  # Na początku nie otrzymaliśmy jeszcze poprawnego PIN-u.
-for attempt in range(3):  # Pozwala wykonać najwyżej trzy próby.
-    entered_pin = input('Enter the PIN code: ')  # Wczytuje wpisany PIN jako tekst.
-    if entered_pin == correct_pin:  # Porównuje wszystkie znaki, również początkowe zero.
-        pin_ok = True  # Zapamiętuje udaną weryfikację.
-        print('PIN is correct')  # Informuje o poprawnym PIN-ie.
-        break  # Kończy pętlę od razu po udanej próbie.
-    else:  # Obsługuje niepoprawny PIN.
-        print('Incorrect...')  # Informuje, że wpisany kod był błędny.
-if not pin_ok:  # Sprawdza, czy żadna z trzech prób nie była poprawna.
-    print('Sorry, your payment card has been blocked.')  # Wyświetla blokadę dopiero po trzech nieudanych próbach.
+# Zadanie 6.26: Sprawdzamy PIN 0805 w najwyżej trzech próbach.
+# PIN jest tekstem, aby zachować początkowe zero; break kończy pętlę od razu po trafieniu.
+
+correct_pin = '0805'  # Zapisuje poprawny PIN jako tekst 0805.
+pin_ok = False  # Zapisuje, że na razie nie wpisano poprawnego PIN-u.
+for attempt in range(3):  # Pozwala wykonać najwyżej 3 próby.
+    entered_pin = input('Enter the PIN code: ')  # Pobiera wpisany PIN jako tekst.
+    if entered_pin == correct_pin:  # Sprawdza, czy wpisany PIN jest równy poprawnemu.
+        pin_ok = True  # Zapamiętuje, że PIN był poprawny.
+        print('PIN is correct')  # Potwierdza poprawny PIN.
+        break  # Kończy próby po poprawnej odpowiedzi.
+    else:  # Obsługuje błędny PIN.
+        print('Incorrect...')  # Pokazuje informację o błędnym PIN-ie.
+if not pin_ok:  # not pin_ok jest prawdą, gdy nie trafiono PIN-u.
+    print('Sorry, your payment card has been blocked.')  # Pokazuje blokadę po trzech nieudanych próbach.

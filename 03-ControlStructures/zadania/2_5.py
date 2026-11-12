@@ -1,16 +1,16 @@
 # Zadanie 2.5: kwartał roku na podstawie numeru miesiąca.
-# Przykłady: miesiąc 12 -> kwartał 4; 10 -> 4; 9 -> 3; 1 -> 1.
+
 month = int(input('Enter month number (1..12): '))  # Pobiera numer miesiąca jako liczbę całkowitą.
-quarter = 0  # Ustawia 0 jako informację, że nie wybrano jeszcze poprawnego kwartału.
-if month < 1 or month > 12:  # Sprawdza, czy numer miesiąca wykracza poza zakres od 1 do 12.
-    print('Incorrect month number')  # Informuje o niepoprawnym numerze miesiąca.
-elif month >= 10:  # Sprawdza miesiące 10, 11 i 12, czyli czwarty kwartał.
-    quarter = 4  # Zapisuje numer czwartego kwartału.
-elif month >= 7:  # Po wykluczeniu miesięcy od 10 wzwyż sprawdza miesiące 7, 8 i 9.
-    quarter = 3  # Zapisuje numer trzeciego kwartału.
-elif month >= 4:  # Sprawdza miesiące 4, 5 i 6.
-    quarter = 2  # Zapisuje numer drugiego kwartału.
-else:  # Pozostają poprawne miesiące 1, 2 i 3.
-    quarter = 1  # Zapisuje numer pierwszego kwartału.
-if quarter > 0:  # Wyświetla wynik tylko dla poprawnego numeru miesiąca.
-    print(f'Month {month} is in quarter {quarter}')  # Pokazuje numer miesiąca i wyznaczony kwartał.
+quarter = 0  # Przygotowuje kwartał; 0 oznacza brak poprawnego wyniku.
+if month < 1 or month > 12:  # or oznacza lub; odrzuca numery mniejsze od 1 albo większe od 12.
+    print('Incorrect month number')  # Pokazuje informację o błędnym miesiącu.
+elif month >= 10:  # Po wykluczeniu błędnych numerów sprawdza miesiące 10-12.
+    quarter = 4  # Zapisuje czwarty kwartał.
+elif month >= 7:  # Sprawdza pozostałe miesiące 7-9.
+    quarter = 3  # Zapisuje trzeci kwartał.
+elif month >= 4:  # Sprawdza pozostałe miesiące 4-6.
+    quarter = 2  # Zapisuje drugi kwartał.
+else:  # Pozostają poprawne miesiące 1-3.
+    quarter = 1  # Zapisuje pierwszy kwartał.
+if quarter > 0:  # Pokazuje wynik tylko po ustaleniu poprawnego kwartału.
+    print(f'Month {month} is in quarter {quarter}')  # f wstawia wartości z {} i pokazuje miesiąc oraz kwartał.

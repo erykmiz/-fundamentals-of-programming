@@ -1,3 +1,4 @@
-# Zadanie 4.3: wyświetlenie zdania sześć razy zamiast czterech.
-for i in range(6):  # Powtarza wciętą instrukcję sześć razy; i przyjmuje wartości od 0 do 5.
-    print("Practice makes perfect!")  # Wyświetla zdanie w nowej linii przy każdym powtórzeniu.
+# Zadanie 4.3: wyświetlamy zdanie sześć razy.
+
+for i in range(6):  # Powtarza wciętą linię 6 razy; i ma wartości od 0 do 5.
+    print("Practice makes perfect!")  # Pokazuje zdanie w nowej linii.

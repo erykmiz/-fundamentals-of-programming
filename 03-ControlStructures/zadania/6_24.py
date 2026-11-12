@@ -1,5 +1,8 @@
-# Zadanie 6.24: wzór z gwiazdek, najpierw rosnący, a potem malejący.
-for count in range(1, 6):  # Ustawia liczbę gwiazdek w rosnących wierszach od 1 do 5.
-    print(('* ' * count).rstrip())  # Powtarza tekst gwiazdki ze spacją i usuwa ostatnią zbędną spację.
-for count in range(4, 0, -1):  # Ustawia liczbę gwiazdek w malejących wierszach na 4, 3, 2 i 1.
-    print(('* ' * count).rstrip())  # Wyświetla malejącą liczbę gwiazdek w osobnych wierszach.
+# Zadanie 6.24: Rysujemy rosnące i malejące rzędy gwiazdek.
+# Tekst * liczba powtarza tekst; rstrip() usuwa spację na końcu wiersza.
+# range(4, 0, -1) daje 4, 3, 2, 1: krok -1 zmniejsza wartość, a końcowe 0 nie wchodzi.
+
+for count in range(1, 6):  # Wybiera liczby gwiazdek od 1 do 5.
+    print(('* ' * count).rstrip())  # Pokazuje wybraną liczbę gwiazdek bez końcowej spacji.
+for count in range(4, 0, -1):  # Wybiera liczby gwiazdek od 4 do 1.
+    print(('* ' * count).rstrip())  # Pokazuje kolejne malejące wiersze.

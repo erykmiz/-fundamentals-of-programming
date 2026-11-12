@@ -1,16 +1,17 @@
 # Zadanie 2.3: zużycie paliwa dla trybów Auto, Manual i Eco.
-# Przykłady: M i 200 km -> 18 l; A i 400 km -> 28 l; E i 350 km -> 21 l.
-driving_mode = input('Enter driving mode (A/M/E): ').strip().upper()  # Pobiera symbol trybu i zamienia go na wielką literę.
+# f wstawia wartości z {}; :g daje zwięzły zapis liczby, np. 18 zamiast 18.0.
+
+driving_mode = input('Enter driving mode (A/M/E): ').strip().upper()  # Pobiera tryb i zamienia litery na wielkie, np. m na M.
 distance = int(input('Enter distance in km: '))  # Pobiera długość trasy w pełnych kilometrach.
-fuel_consumption = 0  # Przygotowuje zmienną na zużycie paliwa; 0 oznacza tu nierozpoznany tryb.
-if driving_mode == 'A':  # Sprawdza, czy wybrano tryb Auto.
-    fuel_consumption = 7  # Ustawia zużycie 7 litrów na 100 km dla trybu Auto.
-elif driving_mode == 'M':  # Sprawdza, czy wybrano tryb Manual.
-    fuel_consumption = 9  # Ustawia zużycie 9 litrów na 100 km dla trybu Manual.
-elif driving_mode == 'E':  # Sprawdza, czy wybrano tryb Eco.
-    fuel_consumption = 6  # Ustawia zużycie 6 litrów na 100 km dla trybu Eco.
-else:  # Obsługuje symbol trybu inny niż A, M lub E.
-    print('Incorrect driving mode')  # Informuje o błędnym symbolu.
-if fuel_consumption > 0:  # Oblicza wynik tylko wtedy, gdy wybrano poprawny tryb.
-    total_consumption = distance / 100 * fuel_consumption  # Przelicza zużycie na całą podaną trasę.
-    print(f'Total fuel consumption over a distance of {distance} km in driving mode {driving_mode} is {total_consumption:g} liters')  # Wyświetla dystans, tryb oraz obliczoną liczbę litrów.
+fuel_consumption = 0  # Przygotowuje spalanie; 0 oznacza, że nie wybrano poprawnego trybu.
+if driving_mode == 'A':  # Sprawdza tryb Auto.
+    fuel_consumption = 7  # Ustawia 7 litrów na 100 km.
+elif driving_mode == 'M':  # Sprawdza tryb Manual.
+    fuel_consumption = 9  # Ustawia 9 litrów na 100 km.
+elif driving_mode == 'E':  # Sprawdza tryb Eco.
+    fuel_consumption = 6  # Ustawia 6 litrów na 100 km.
+else:  # Obsługuje symbol inny niż A, M lub E.
+    print('Incorrect driving mode')  # Pokazuje informację o błędnym trybie.
+if fuel_consumption > 0:  # Liczy wynik tylko dla poprawnego trybu, który ma spalanie większe od 0.
+    total_consumption = distance / 100 * fuel_consumption  # Liczy paliwo na całą trasę, np. 200 / 100 * 9 = 18 litrów.
+    print(f'Total fuel consumption over a distance of {distance} km in driving mode {driving_mode} is {total_consumption:g} liters')  # Pokazuje trasę, tryb i liczbę zużytych litrów.

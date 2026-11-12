@@ -1,7 +1,9 @@
-# Zadanie 4.4: dodanie spacji między znakami nazwy uczelni.
-university = "Krakow University of Economics"  # Zapisuje nazwę uczelni podaną w zadaniu.
-university_expanded = ""  # Przygotowuje pusty tekst, do którego będziemy dopisywać znaki.
-for char in university:  # Pobiera po kolei każdy znak, również spacje obecne już w nazwie.
-    university_expanded = university_expanded + char + " "  # Dopisuje aktualny znak i dodatkową spację.
-print(university)  # Wyświetla oryginalną nazwę uczelni.
-print(university_expanded.rstrip())  # Wyświetla rozszerzoną nazwę, usuwając zbędną spację na samym końcu.
+# Zadanie 4.4: dodajemy spacje między znakami nazwy uczelni.
+# + łączy teksty, a rstrip() usuwa białe znaki z końca tekstu.
+
+university = "Krakow University of Economics"  # Zapisuje pełną nazwę uczelni.
+university_expanded = ""  # Przygotowuje pusty tekst na wynik.
+for char in university:  # Bierze kolejny znak nazwy, także spację.
+    university_expanded = university_expanded + char + " "  # Dopisuje znak i dodatkową spację do wyniku.
+print(university)  # Pokazuje oryginalną nazwę.
+print(university_expanded.rstrip())  # Pokazuje wynik bez zbędnej spacji na końcu.

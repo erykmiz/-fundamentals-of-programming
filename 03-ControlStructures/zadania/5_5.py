@@ -1,16 +1,18 @@
-# Zadanie 5.5: suma i średnia liczb podawanych do momentu wpisania zera.
-# Zero kończy wprowadzanie i nie jest uwzględniane ani w sumie, ani w liczbie danych.
-total_sum = 0  # Przygotowuje sumę wszystkich zaakceptowanych liczb.
-count = 0  # Przygotowuje licznik liczb potrzebny do obliczenia średniej.
-while True:  # Powtarza wprowadzanie danych aż do wykonania instrukcji break.
-    number = int(input("Enter a number (0 to stop): "))  # Wczytuje kolejną liczbę całkowitą.
-    if number == 0:  # Sprawdza, czy użytkownik wybrał zakończenie wprowadzania danych.
-        break  # Natychmiast opuszcza pętlę, nie dodając zera do danych.
-    total_sum += number  # Dodaje wprowadzoną liczbę do sumy.
-    count += 1  # Zwiększa liczbę zaakceptowanych wartości o jeden.
-print(f"The total sum of the numbers is: {total_sum}")  # Wyświetla sumę; przy braku danych będzie to zero.
-if count > 0:  # Sprawdza, czy istnieją dane, aby uniknąć dzielenia przez zero.
-    average = total_sum / count  # Dzieli sumę przez liczbę danych, otrzymując średnią arytmetyczną.
-    print(f"The arithmetic mean of the numbers is: {average}")  # Wyświetla obliczoną średnią.
-else:  # Obsługuje sytuację, w której pierwszą wpisaną liczbą było zero.
-    print("No numbers entered; arithmetic mean cannot be calculated.")  # Wyjaśnia, dlaczego nie da się obliczyć średniej.
+# Zadanie 5.5: obliczamy sumę i średnią podanych liczb.
+# Zero kończy wprowadzanie i nie jest liczone do średniej.
+# f wstawia wartości zmiennych w miejsca {}.
+
+total_sum = 0  # Zaczyna sumę od 0.
+count = 0  # Zaczyna licznik podanych liczb od 0.
+while True:  # Powtarza kod aż do wykonania break.
+    number = int(input("Enter a number (0 to stop): "))  # Pobiera kolejną liczbę całkowitą.
+    if number == 0:  # Sprawdza, czy wpisano zero kończące program.
+        break  # Opuszcza pętlę bez dodawania zera.
+    total_sum += number  # Dodaje liczbę do sumy.
+    count += 1  # Zwiększa liczbę przyjętych danych o 1.
+print(f"The total sum of the numbers is: {total_sum}")  # Pokazuje obliczoną sumę.
+if count > 0:  # Sprawdza, czy podano dane, aby nie dzielić przez 0.
+    average = total_sum / count  # Dzieli sumę przez liczbę danych, otrzymując średnią.
+    print(f"The arithmetic mean of the numbers is: {average}")  # Pokazuje obliczoną średnią.
+else:  # Obsługuje wpisanie zera jako pierwszej liczby.
+    print("No numbers entered; arithmetic mean cannot be calculated.")  # Informuje, że nie ma danych do obliczenia średniej.

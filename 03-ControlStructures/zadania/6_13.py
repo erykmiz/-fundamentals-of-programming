@@ -1,6 +1,8 @@
-# Zadanie 6.13: sprawdzenie zakresu prędkości podanego w ćwiczeniu.
-car_speed = float(input('Enter car speed: '))  # Wczytuje prędkość samochodu jako liczbę.
-speed_limit_min = 40  # Zapisuje dolną granicę z treści zadania.
-speed_limit_max = 140  # Zapisuje górną granicę z treści zadania.
-if car_speed < speed_limit_min or car_speed > speed_limit_max:  # Sprawdza, czy prędkość jest poza przedziałem od 40 do 140 włącznie.
-    print('Warning: invalid car speed!!')  # Wyświetla ostrzeżenie, gdy choć jedna z granic jest przekroczona.
+# Zadanie 6.13: Sprawdzamy zakres prędkości z ćwiczenia: 40–140 km/h.
+# or znaczy „lub”; ostrzeżenie wystarczy po spełnieniu jednego z warunków.
+
+car_speed = float(input('Enter car speed: '))  # Pobiera prędkość i zamienia tekst na liczbę.
+speed_limit_min = 40  # Ustawia dolną granicę: 40 km/h.
+speed_limit_max = 140  # Ustawia górną granicę: 140 km/h.
+if car_speed < speed_limit_min or car_speed > speed_limit_max:  # Sprawdza, czy prędkość jest mniejsza od 40 lub większa od 140.
+    print('Warning: invalid car speed!!')  # Pokazuje ostrzeżenie o prędkości poza zakresem.

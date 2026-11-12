@@ -1,9 +1,11 @@
-# Zadanie 5.6: zastąpienie pętli for pętlą while przy sumowaniu liczb parzystych.
-N = 10  # Zapisuje górną granicę zakresu podaną w przykładowym programie.
-sum_even = 0  # Przygotowuje sumę liczb parzystych.
-number = 1  # Rozpoczyna sprawdzanie liczb od jedynki.
+# Zadanie 5.6: sumujemy liczby parzyste pętlą while.
+# % 2 == 0 oznacza parzystość; += dodaje do obecnej wartości.
+
+N = 10  # Ustawia górną granicę na 10.
+sum_even = 0  # Zaczyna sumę od 0.
+number = 1  # Zaczyna sprawdzanie od liczby 1.
 while number <= N:  # Sprawdza kolejne liczby aż do N włącznie.
-    if number % 2 == 0:  # Rozpoznaje liczbę parzystą po zerowej reszcie z dzielenia przez 2.
-        sum_even += number  # Dodaje liczbę do sumy tylko wtedy, gdy jest parzysta.
-    number += 1  # Przechodzi do następnej liczby, dzięki czemu pętla się zakończy.
-print(f"The sum of even numbers from 1 to {N} is: {sum_even}")  # Wyświetla wynik 30 dla zakresu od 1 do 10.
+    if number % 2 == 0:  # Sprawdza, czy liczba jest parzysta.
+        sum_even += number  # Dodaje parzystą liczbę do sumy.
+    number += 1  # Przechodzi do następnej liczby.
+print(f"The sum of even numbers from 1 to {N} is: {sum_even}")  # Wstawia wartości w {} i pokazuje sumę 30.

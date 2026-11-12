@@ -1,5 +1,6 @@
 # Zadanie 6.9: uproszczone rozpoznanie imienia zakończonego literą a.
-# Stosujemy regułę z ćwiczenia; sama końcówka nie rozpoznaje poprawnie wszystkich imion.
-name = input('Enter name: ').strip()  # Pobiera imię i usuwa spacje z jego początku i końca.
-if name.lower().endswith('a'):  # Sprawdza końcówkę po zamianie na małe litery; działa także dla pustego tekstu.
-    print(f'{name} -- Polish female name')  # Wyświetla imię tylko wtedy, gdy spełnia warunek z zadania.
+# Sprawdzamy uproszczoną regułę końcówki imienia podaną w ćwiczeniu.
+
+name = input('Enter name: ').strip()  # Pobiera imię; strip usuwa spacje z początku i końca.
+if name.lower().endswith('a'):  # lower zmienia litery na małe, a endswith sprawdza końcówkę a.
+    print(f'{name} -- Polish female name')  # f wstawia imię w {} i pokazuje wiadomość po spełnieniu warunku.

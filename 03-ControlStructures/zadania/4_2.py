@@ -1,7 +1,9 @@
-# Zadanie 4.2: przechodzenie po znakach tekstu i liczbach z range().
-city = "Krakow"  # Zapisuje przykładową nazwę miasta jako tekst.
-for char in city:  # Pobiera kolejno każdą literę nazwy miasta.
-    print(char)  # Wyświetla aktualną literę w osobnej linii.
+# Zadanie 4.2: pętla po literach i liczbach.
+# Wcięcie wskazuje linie należące do pętli; koniec range nie wchodzi do zakresu.
 
-for i in range(5):  # Powtarza instrukcję dla liczb 0, 1, 2, 3 i 4; liczba 5 nie należy do zakresu.
-    print(i)  # Wyświetla aktualną wartość zmiennej i.
+city = "Krakow"  # Zapisuje tekst Krakow w zmiennej city.
+for char in city:  # Przechodzi kolejno po literach miasta.
+    print(char)  # Pokazuje bieżącą literę w nowej linii.
+
+for i in range(5):  # Przechodzi po liczbach 0, 1, 2, 3, 4, bez 5.
+    print(i)  # Pokazuje bieżącą liczbę.
